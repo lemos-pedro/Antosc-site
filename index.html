@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+  <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTOSC | Infraestrutura de telecomunicações em Angola</title>
+  <meta name="description" content="A ANTOSC opera mais de 200 sites de telecomunicações em 18 províncias de Angola: tower sharing, RAN sharing, energia híbrida e conectividade para operadoras, ISPs e setores industriais.">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<!-- SEO básico -->
+<meta name="author" content="ANTOSC">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0d6efd">
+
+<!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:image" content="https://antosc.co.ao/imgs/Antosc.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ANTOSC">
+<meta property="og:locale" content="pt_AO">
+<meta property="og:title" content="ANTOSC | Infraestrutura de telecomunicações em Angola">
+<meta property="og:description" content="A ANTOSC opera mais de 200 sites de telecomunicações em 18 províncias de Angola: tower sharing, RAN sharing, energia híbrida e conectividade para operadoras, ISPs e setores industriais.">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ANTOSC | Infraestrutura de telecomunicações em Angola">
+<meta name="twitter:description" content="A ANTOSC opera mais de 200 sites de telecomunicações em 18 províncias de Angola: tower sharing, RAN sharing, energia híbrida e conectividade para operadoras, ISPs e setores industriais.">
+<meta name="twitter:image" content="https://antosc.co.ao/imgs/Antosc.png">
+
+<!-- Favicon -->
+
+<!-- Structured Data: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ANTOSC",
+  "url": "https://antosc.co.ao",
+  "logo": "https://antosc.co.ao/imgs/Antosc.png",
+  "foundingDate": "2017",
+  "description": "ANTOSC atua em infraestrutura de telecomunicações em Angola, com soluções de tower sharing, energia e conectividade.",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+244-924-408-039",
+    "contactType": "customer service",
+    "areaServed": "AO",
+    "availableLanguage": ["pt", "en"]
+  }],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Smart Village Talatona, Zona CS1, Rota Al 19ª",
+    "addressLocality": "Luanda",
+    "addressCountry": "AO"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/antosc"
+  ]
+}
+</script>
+
+<!-- Structured Data: WebSite + Search -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ANTOSC",
+  "url": "https://antosc.co.ao"
+}
+</script>
+
+
+    <style>
+        :root {
+      --primary: #0d3b66;
+      --primary-light: #1a5c9f;
+      --primary-dark: #082947;
+      --secondary: #f8f9fa;
+      --accent: #3498db;
+      --success: #27ae60;
+      --dark: #2c3e50;
+      --light: #ffffff;
+      --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #4db8ff 100%);
+      --gradient-success: linear-gradient(135deg, var(--success) 0%, #2ecc71 100%);
+      --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.12);
+      --border-radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    body {
+      font-family: 'Montserrat', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--dark);
+      background-color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding-bottom: .5rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+   
+    /* Navigation */
+    .navbar {
+      background: var(--gradient-primary);
+      box-shadow: var(--shadow-md);
+      padding: 0.8rem 1rem;
+      transition: var(--transition);
+    }
+
+    .navbar-brand img {
+      width: 155px;
+      filter: brightness(0) invert(1);
+    }
+
+    .nav-link {
+      color: #ecf0f1 !important;
+      font-weight: 500;
+      margin: 0 10px;
+      transition: color 0.3s;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .nav-link:hover {
+      color: #3498db !important;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--accent);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link.active {
+      color: #3498db !important;
+    }
+
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Estilização personalizada do botão hamburguer */
+    .custom-toggler {
+      border: none;
+      background: transparent;
+      padding: 0;
+      width: 30px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .custom-toggler span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #ecf0f1;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+
+    .custom-toggler span:nth-child(1) {
+      top: 0px;
+    }
+
+    .custom-toggler span:nth-child(2) {
+      top: 8px;
+    }
+
+    .custom-toggler span:nth-child(3) {
+      top: 16px;
+    }
+
+    .custom-toggler[aria-expanded="true"] span:nth-child(1) {
+      top: 8px;
+      transform: rotate(135deg);
+    }
+
+    .custom-toggler[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+      left: -30px;
+    }
+
+    .custom-toggler[aria-expanded="true"] span:nth-child(3) {
+      top: 8px;
+      transform: rotate(-135deg);
+    }
+
+      
+     /* ===== HERO SECTION RESPONSIVA ===== */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* mantém proporção e cobre todo o container */
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 15px;
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Textos adaptáveis */
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--gradient-accent);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    color: white;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 992px) {
+    .hero-section { min-height: 500px; }
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content p { font-size: 1.1rem; }
+    .hero-cta { padding: 0.9rem 2rem; font-size: 0.95rem; }
+}
+
+@media (max-width: 768px) {
+    .hero-section { min-height: 400px; }
+    .hero-content h1 { font-size: 1.8rem; }
+    .hero-content p { font-size: 1rem; }
+    .hero-cta { padding: 0.8rem 1.8rem; font-size: 0.9rem; }
+}
+
+@media (max-width: 576px) {
+    .hero-section { min-height: 350px; }
+    .hero-content h1 { font-size: 1.5rem; }
+    .hero-content p { font-size: 0.9rem; }
+    .hero-cta { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
+}
+
+        /* ===== PARCEIROS ===== */
+        #parceiros {
+            background: var(--secondary);
+            padding: 5rem 0;
+        }
+
+        #parceiros h2 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        #parceiros h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        .partner-logo {
+            max-height: 80px;
+            object-fit: contain;
+            filter: none;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(13, 59, 102, 0.12);
+            transition: var(--transition);
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .partner-logo:hover {
+            box-shadow: 0 8px 24px rgba(13, 59, 102, 0.22);
+            transform: scale(1.08);
+        }
+
+        /* ===== NÚMEROS ANIMADOS  ===== */
+        #stats {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 5rem 0;
+        }
+
+        #stats .counter, #stats .counter-static {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.2;
+        }
+
+        #stats p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .stat-box {
+            padding: 2rem 1rem;
+            transition: var(--transition);
+            border-radius: var(--border-radius);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===== SOLUÇÕES ===== */
+        #solucoes {
+            padding: 5rem 0;
+        }
+
+        .solution-card {
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            border: none;
+            box-shadow: var(--shadow-sm);
+            height: 100%;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .solution-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .solution-card .icon {
+            font-size: 3.5rem;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
+
+        .timeline::after {
+            content: "";
+            position: absolute;
+            width: 4px;
+            background: var(--gradient-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 25px 40px;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            right: -12px;
+            background: var(--gradient-accent);
+            border: 4px solid white;
+            top: 32px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: var(--shadow-md);
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+        }
+
+        .timeline-item.right::after {
+            left: -12px;
+        }
+
+        .timeline-content {
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            background: white;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .timeline-content:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+        }
+
+        .timeline-content h4 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        /* ===== IDENTIDADE INSTITUCIONAL  ===== */
+        .identidade {
+            background-color: var(--secondary);
+            padding: 5rem 0;
+        }
+
+        .identidade h2 {
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .identidade h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        .identidade p {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        .valores {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .valores li {
+            position: relative;
+            padding: 1rem 1rem 1rem 2.5rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .valores li:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .valores li::before {
+            content: "✓";
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .alpha-figure { max-width: 340px; margin: 0 auto; }
+        .alpha-img { width: 100%; max-height: 460px; object-fit: cover; border-radius: 18px; box-shadow: 0 14px 34px rgba(13, 59, 102, 0.28); }
+        .alpha-figure figcaption { margin-top: .9rem; font-size: .92rem; color: #33414f; line-height: 1.4; }
+
+        /* ===== TIME DE LIDERANÇA ===== */
+        .team-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .team-card {
+            border-radius: var(--border-radius);
+            background-color: #fff;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-photo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .team-card h5 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .team-card p {
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* ===== CASOS DE SUCESSO ===== */
+        #casos-de-sucesso {
+            background-color: var(--secondary);
+            padding: 5rem 0;
+        }
+
+        #casos-de-sucesso h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        #casos-de-sucesso h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        #casos-de-sucesso p {
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        /* Cards */
+        #casos-de-sucesso .case-card {
+            border: none;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            background-color: #fff;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        #casos-de-sucesso .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        #casos-de-sucesso .case-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        #casos-de-sucesso .case-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Imagens */
+        #casos-de-sucesso .card-img-top {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        /* Conteúdo */
+        #casos-de-sucesso .card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #casos-de-sucesso .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        #casos-de-sucesso .card-text {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        #casos-de-sucesso ul {
+            font-size: 0.95rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        #casos-de-sucesso ul li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        #casos-de-sucesso ul li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Botão dentro dos cards */
+        #casos-de-sucesso .btn {
+            align-self: flex-start;
+            border-radius: 50px;
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: var(--gradient-accent);
+            border: none;
+            color: white;
+            transition: var(--transition);
+        }
+
+        #casos-de-sucesso .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            color: white;
+        }
+
+        /* Modal */
+        #caseModal .modal-content {
+            border-radius: var(--border-radius);
+            border: none;
+            box-shadow: var(--shadow-lg);
+        }
+
+        #caseModal .modal-header {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        #caseModal .modal-footer {
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        /* ===========================
+           SUSTENTABILIDADE / ESG
+           =========================== */
+        #esg {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #esg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+        }
+
+        #esg .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        #esg h2 {
+            color: var(--primary);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #esg h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        #esg .text-muted {
+            color: #6c757d !important;
+        }
+
+        #esg .card {
+            border: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            background: white;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        #esg .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        #esg .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        #esg .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        #esg h5 {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        #esg .progress {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            overflow: visible;
+            position: relative;
+        }
+
+        #esg .progress-bar {
+            border-radius: 5px;
+            position: relative;
+            overflow: visible;
+            transition: width 1.5s ease-in-out;
+        }
+
+        #esg .progress-bar::after {
+            content: attr(aria-valuenow) "%";
+            position: absolute;
+            right: 0;
+            top: -25px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        #esg .progress-bar:first-child {
+            background: var(--gradient-primary);
+        }
+
+        #esg .progress-bar.bg-success {
+            background: linear-gradient(90deg, #20c997 0%, #0ca678 100%) !important;
+        }
+
+        #esg .progress-bar.bg-info {
+            background: linear-gradient(90deg, #3dc7f5 0%, #0dcaf0 100%) !important;
+        }
+
+        #esg ul.list-unstyled li {
+            padding: 1rem 1.5rem;
+            border-left: 3px solid transparent;
+            transition: var(--transition);
+            margin-bottom: 0.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        #esg ul.list-unstyled li:hover {
+            border-left-color: var(--accent);
+            background-color: rgba(13, 59, 102, 0.03);
+        }
+
+        #esg ul.list-unstyled h6 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        #esg .btn-success {
+            background: linear-gradient(135deg, #198754 0%, #0f5132 100%);
+            border: none;
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        #esg .btn-success:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        #esg .btn-outline-secondary {
+            border: 2px solid #6c757d;
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        #esg .btn-outline-secondary:hover {
+            background-color: #6c757d;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* =========================
+           CARDS DE LIDERANÇA
+           ========================= */
+        .team-section .card {
+            border: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            overflow: hidden;
+            background: white;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .team-section .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .team-section .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .team-section .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-section .card-body {
+            padding: 2rem 1.5rem;
+        }
+
+        .team-section .rounded-circle {
+            border: 4px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        var(--gradient-primary) border-box;
+            transition: var(--transition);
+        }
+
+        .team-section .card:hover .rounded-circle {
+            transform: scale(1.05);
+        }
+
+        .team-section .card-title {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .team-section .card-text {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* =========================
+           RODAPÉ / FOOTER
+           ========================= */
+        footer {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%) !important;
+            padding-top: 4rem !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+
+        footer h6 {
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            color: white;
+        }
+
+        footer h6::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        footer .text-muted {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        footer a.text-muted {
+            transition: var(--transition);
+        }
+
+        footer a.text-muted:hover {
+            color: white !important;
+            padding-left: 5px;
+        }
+
+        footer ul.list-unstyled li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer form {
+            position: relative;
+        }
+
+        footer input.form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 50px;
+            padding: 0.75rem 1.25rem;
+        }
+
+        footer input.form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        footer input.form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+        }
+
+        footer .btn-primary {
+            background: var(--gradient-accent);
+            border: none;
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        footer .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        footer .fa-lg {
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        footer a:hover .fa-lg {
+            color: white !important;
+            transform: translateY(-3px);
+        }
+
+        footer hr {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        footer .small {
+            font-size: 0.875rem;
+        }
+
+     /* =========================
+   ANIMAÇÕES ESPECÍFICAS
+   ========================= */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards com animação sequencial */
+#esg .card,
+.team-section .card {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+#esg .card:nth-child(1) { animation-delay: 0.1s; }
+#esg .card:nth-child(2) { animation-delay: 0.2s; }
+
+.team-section .card:nth-child(1) { animation-delay: 0.1s; }
+.team-section .card:nth-child(2) { animation-delay: 0.2s; }
+.team-section .card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Fade-in para scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Foco acessível */
+a:focus, button:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Scroll personalizado */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb {
+    background: var(--primary-light);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+/* Extra pequenos (<576px) */
+@media (max-width: 575.98px) {
+    .hero-content h1 { font-size: 1.8rem; }
+    .hero-content p { font-size: 1rem; }
+    .hero-cta { padding: 0.8rem 1.8rem; }
+    #stats .counter { font-size: 2.5rem; }
+    .timeline::after { left: 20px; }
+    .timeline-item { width: 100%; padding: 0 25px 0 60px; }
+    .timeline-item::after { left: 15px; }
+    .timeline-item.right { left: 0; }
+    .valores { grid-template-columns: 1fr; }
+    footer .col-md-4, footer .col-md-2 { margin-bottom: 2rem; }
+    footer .text-md-end { text-align: left !important; margin-top: 1rem; }
+}
+  /* Ajustes para mobile */
+        @media (max-width: 991px) {
+            #navbarNav {
+                background-color: var(--primary);
+                padding: 20px;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 5px 0;
+                text-align: center;
+            }
+        }
+
+/* Pequenos (576px–767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content p { font-size: 1.1rem; }
+    #stats .counter { font-size: 2.8rem; }
+    .valores { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Médios (768px–991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content p { font-size: 1.2rem; }
+    #stats .counter { font-size: 3rem; }
+}
+
+/* Grandes (992px–1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero-content h1 { font-size: 3rem; }
+}
+
+/* Extra grandes (≥1200px) */
+@media (min-width: 1200px) {
+    .hero-content h1 { font-size: 3.5rem; }
+}
+
+/* Timeline mobile */
+@media (max-width: 767px) {
+    .timeline::after { left: 20px; }
+    .timeline-item { width: 100%; padding: 0 25px 0 60px; }
+    .timeline-item::after { left: 15px; }
+    .timeline-item.right { left: 0; }
+}
+
+/* ESG mobile */
+@media (max-width: 768px) {
+    #esg .row.gy-4 > div { margin-bottom: 1.5rem; }
+    #esg .text-center .btn { display: block; width: 100%; margin-bottom: 1rem; }
+}
+
+/* Imagens e vídeos responsivos */
+img { max-width: 100%; height: auto; }
+.embed-responsive {
+    position: relative; display: block; width: 100%; overflow: hidden;
+}
+.embed-responsive::before { content: ""; display: block; padding-top: 56.25%; }
+.embed-responsive-item { position: absolute; top:0; left:0; width:100%; height:100%; border:0; }
+    </style>
+  <link rel="stylesheet" href="css/contrast.css">
+</head>
+<body>
+
+   <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="imgs/Antosc.png" loading="lazy" alt="Logo Antosc">
+      </a>
+
+      <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="solucao.html">Soluções</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+<!-- HERO SECTION -->
+<section class="hero-section d-flex align-items-center justify-content-center">
+  <video class="hero-video" 
+         autoplay 
+         muted 
+         loop 
+         playsinline 
+         preload="none" 
+         poster="imgs/paisagem.jpg">
+    <source data-src="https://video.wixstatic.com/video/bf159d_39736455dba44c8e8143a5fa33c26bb4/720p/mp4/file.mp4" type="video/mp4">
+    O seu navegador não suporta vídeo.
+  </video>
+  <div class="hero-overlay" style="background:linear-gradient(rgba(8,41,71,.72),rgba(8,41,71,.72));"></div>
+  <div class="hero-content">
+    <h1>Infraestrutura crítica de telecomunicações em Angola</h1>
+    <p>Tower sharing, energia e conectividade para operadoras, ISPs e setores industriais — mais de 200 sites ativos em 21 províncias.</p>
+    <a href="sobre.html#map" class="hero-cta mb-2" style="background:transparent;border:2px solid #fff;">Ver mapa de cobertura</a>
+  </div>
+</section>
+
+<script>
+  // Lazy load funcional do vídeo
+  const heroVideo = document.querySelector('.hero-video');
+  const heroObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const source = heroVideo.querySelector('source');
+        source.src = source.dataset.src;
+        heroVideo.load();
+        observer.unobserve(heroVideo);
+      }
+    });
+  }, { threshold: 0.25 }); 
+
+  heroObserver.observe(heroVideo);
+</script>
+
+
+
+<!-- =========================
+     NÚMEROS ANIMADOS
+========================= -->
+<section id="stats" class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-3"><div class="stat-box">
+        <div class="counter" id="stat-sites" data-target="200" data-prefix="+">200</div>
+        <p class="fw-semibold mb-0">Sites ativos</p></div></div>
+      <div class="col-6 col-md-3"><div class="stat-box">
+        <div class="counter" id="stat-prov" data-target="18">18</div>
+        <p class="fw-semibold mb-0">Províncias com presença</p></div></div>
+      <div class="col-6 col-md-3"><div class="stat-box">
+        <div class="counter-static">2017</div>
+        <p class="fw-semibold mb-0">Ano de fundação</p></div></div>
+      <div class="col-6 col-md-3"><div class="stat-box">
+        <div class="counter" data-target="99.9" data-suffix="%">99.9</div>
+        <p class="fw-semibold mb-0">Meta de disponibilidade da rede</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     NOSSAS SOLUÇÕES
+========================= -->
+<section id="solucoes" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5 text-primary">Nossas Soluções</h2>
+    <div class="row g-4">
+
+      <!-- Solução 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 solution-card shadow-sm border-0 p-4 d-flex flex-column">
+          <div class="icon mb-3 text-primary fs-2">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>   
+          <h5 class="fw-bold">Tower Sharing</h5>
+          <p class="text-muted">
+            Otimizamos a utilização de Sites de telecomunicações, permitindo múltiplas operadoras partilharem infraestrutura, reduzindo custos e acelerando a expansão.
+          </p>
+        </div>
+      </div>
+
+      <!-- Solução 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 solution-card shadow-sm border-0 p-4 d-flex flex-column">
+          <div class="icon mb-3 text-primary fs-2">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h5 class="fw-bold">Energia & Serviços</h5>
+          <p class="text-muted">
+            Soluções completas de energia como serviço, com monitoramento remoto, manutenção preventiva e suporte contínuo para operações críticas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Solução 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 solution-card shadow-sm border-0 p-4 d-flex flex-column">
+          <div class="icon mb-3 text-primary fs-2">
+            <i class="fas fa-building"></i>
+          </div>
+          <h5 class="fw-bold">Infraestruturas</h5>
+          <p class="text-muted">
+            Implementamos infraestruturas completas, ativas e passivas, garantindo operações seguras, eficientes e escaláveis.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     IDENTIDADE INSTITUCIONAL
+========================= -->
+<section class="identidade py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      
+      <!-- Imagem -->
+      <div class="col-md-5 text-center">
+        <figure class="alpha-figure mb-0">
+          <!-- Colocar a fotografia real em imgs/site-alpha.jpg (substitui automaticamente a ilustração). -->
+          <img src="imgs/site-alpha.jpg" onerror="this.onerror=null;this.src='imgs/site-alpha-placeholder.svg';" loading="lazy" alt="Site Alpha, o primeiro site 5G da ANTOSC: torre monotubular junto ao Hotel Mona Lisa" class="img-fluid alpha-img">
+          <figcaption><strong>Site Alpha</strong> — o primeiro site 5G da ANTOSC. Torre monotubular junto ao Hotel Mona Lisa.</figcaption>
+        </figure>
+      </div>
+
+      <!-- Conteúdo -->
+      <div class="col-md-7">
+        <h2 class="fw-bold mb-4 text-primary">Identidade Institucional</h2>
+
+        <p><strong>Missão:</strong> Entregar infraestrutura crítica de telecomunicações em Angola, com excelência operacional e valor consistente para acionistas e clientes.</p>
+
+        <p><strong>Visão:</strong> Ser referência em partilha de infraestruturas de telecomunicações, liderando em qualidade, inovação e sustentabilidade em Angola.</p>
+
+        <div>
+          <strong>Valores:</strong>
+          <ul class="valores mt-2">
+          <li>Qualidade — padrões internacionais</li>
+          <li>Inovação — adoção de novas tecnologias</li>
+          <li>Ética — transparência em todas as operações</li>
+          <li>Respeito — valorização das pessoas e comunidades</li>
+          <li>Sustentabilidade — práticas ambientalmente responsáveis</li>
+          <li>Agilidade — resposta rápida ao mercado</li>
+          <li>Diversidade — inclusão e respeito pelas diferenças</li>
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     LIDERANÇA (resumo; detalhe em sobre.html#lideranca)
+     VALIDAR: nomes, cargos e fotografias com a administração.
+========================= -->
+<section class="team py-5 bg-light" id="lideranca-resumo">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-2 text-primary">A Liderança</h2>
+    <p class="text-center text-muted mb-5">Equipa executiva responsável pela estratégia, operação técnica e gestão financeira da ANTOSC.</p>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="team-card text-center p-4 shadow-sm h-100">
+        <img src="imgs/antonio.jpg" alt="António Nunes, Presidente do Conselho de Administração" class="team-photo mb-3 rounded-circle" loading="lazy">
+        <h5 class="fw-bold">António Nunes</h5>
+        <p class="text-primary fw-semibold mb-1">Presidente do Conselho de Administração</p>
+        <p class="small fw-semibold text-uppercase text-muted mb-2">Direção executiva</p>
+        <p class="text-muted small">Define a estratégia da empresa e lidera a equipa executiva, com foco em inovação, sustentabilidade e eficiência.</p>
+      </div></div>
+      <div class="col-md-4"><div class="team-card text-center p-4 shadow-sm h-100">
+        <img src="imgs/cto.jpg" alt="João Baptista, Diretor de Operações Técnicas" class="team-photo mb-3 rounded-circle" loading="lazy">
+        <h5 class="fw-bold">João Baptista</h5>
+        <p class="text-primary fw-semibold mb-1">Diretor de Operações Técnicas</p>
+        <p class="small fw-semibold text-uppercase text-muted mb-2">Direção técnica e operações</p>
+        <p class="text-muted small">Responsável pela conceção, implementação e manutenção das infraestruturas e pela qualidade técnica da rede.</p>
+      </div></div>
+      <div class="col-md-4"><div class="team-card text-center p-4 shadow-sm h-100">
+        <img src="imgs/cfo.jpg" alt="Nuno Costa, Diretor Financeiro" class="team-photo mb-3 rounded-circle" loading="lazy">
+        <h5 class="fw-bold">Nuno Costa</h5>
+        <p class="text-primary fw-semibold mb-1">Diretor Financeiro</p>
+        <p class="small fw-semibold text-uppercase text-muted mb-2">Direção financeira</p>
+        <p class="text-muted small">Responsável pela gestão financeira, planeamento de investimentos e sustentabilidade financeira da expansão.</p>
+      </div></div>
+    </div>
+    <div class="text-center mt-4"><a href="sobre.html#lideranca" class="btn btn-outline-primary">Conhecer a equipa e as áreas de atuação</a></div>
+  </div>
+</section>
+
+<!-- ===========================
+     CASOS DE SUCESSO
+=========================== -->
+<section class="py-5 bg-light" id="casos-de-sucesso">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-primary">Casos de Sucesso</h2>
+      <p class="text-muted">Exemplos de projetos por tipo de solução: o desafio, o que foi implementado e o que mudou na operação.</p>
+    </div>
+    <div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm case-card">
+        <img src="imgs/telemetria.jpg" class="card-img-top" alt="Telemetria remota de sites de telecomunicações" loading="lazy">
+        <div class="card-body d-flex flex-column">
+          <div class="mb-2"><span class="badge rounded-pill bg-light text-primary border me-1">Telemetria</span><span class="badge rounded-pill bg-light text-primary border me-1">Operação e manutenção</span></div>
+          <h5 class="card-title fw-bold">Telemetria Remota — Sites de Telecomunicações</h5>
+          <ul class="list-unstyled small flex-grow-1 mb-3">
+            <li><strong>Contexto:</strong> Monitorização limitada e deslocações frequentes das equipas técnicas aos sites.</li>
+            <li><strong>Solução:</strong> Plataforma de telemetria remota que recolhe e transmite, em tempo real, dados de energia, baterias, temperatura, conectividade e equipamentos.</li>
+            <li><strong>Resultado:</strong> Maior visibilidade operacional e resposta mais rápida a falhas, com menos intervenções em campo.</li>
+          </ul>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#caseModal1">Ver detalhes</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm case-card">
+        <img src="imgs/hibrido.jpg" class="card-img-top" alt="Energia híbrida em regiões rurais" loading="lazy">
+        <div class="card-body d-flex flex-column">
+          <div class="mb-2"><span class="badge rounded-pill bg-light text-primary border me-1">Energia híbrida</span><span class="badge rounded-pill bg-light text-primary border me-1">Conectividade rural</span></div>
+          <h5 class="card-title fw-bold">Energia Híbrida — Regiões Rurais</h5>
+          <ul class="list-unstyled small flex-grow-1 mb-3">
+            <li><strong>Contexto:</strong> Falhas frequentes de energia em torres rurais, com impacto na disponibilidade do serviço.</li>
+            <li><strong>Solução:</strong> Integração de UPS, energia solar e telemetria remota para monitorização e manutenção preventiva.</li>
+            <li><strong>Resultado:</strong> Menor dependência de combustível e maior estabilidade de energia nos sites rurais.</li>
+          </ul>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#caseModal2">Ver detalhes</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm case-card">
+        <img src="imgs/antena.jpg" class="card-img-top" alt="RAN Sharing entre operadores" loading="lazy">
+        <div class="card-body d-flex flex-column">
+          <div class="mb-2"><span class="badge rounded-pill bg-light text-primary border me-1">RAN Sharing</span><span class="badge rounded-pill bg-light text-primary border me-1">Tower Sharing</span></div>
+          <h5 class="card-title fw-bold">RAN Sharing — Operadores Múltiplos</h5>
+          <ul class="list-unstyled small flex-grow-1 mb-3">
+            <li><strong>Contexto:</strong> Infraestrutura duplicada entre operadoras, com custos desnecessários.</li>
+            <li><strong>Solução:</strong> Implementação de RAN Sharing com acordos de nível de serviço (SLA) claros para todos os operadores envolvidos.</li>
+            <li><strong>Resultado:</strong> Menos investimento duplicado e melhor aproveitamento dos recursos existentes.</li>
+          </ul>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#caseModal3">Ver detalhes</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="modal fade" id="caseModal1" tabindex="-1" aria-labelledby="caseModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title fw-bold" id="caseModalLabel1">Telemetria Remota — Sites de Telecomunicações</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+      <div class="modal-body">
+        <p class="mb-2"><span class="badge rounded-pill bg-light text-primary border me-1">Telemetria</span><span class="badge rounded-pill bg-light text-primary border me-1">Operação e manutenção</span></p>
+        <p><strong>Contexto:</strong> Monitorização limitada e deslocações frequentes das equipas técnicas aos sites.</p>
+        <p><strong>Solução implementada:</strong> Plataforma de telemetria remota que recolhe e transmite, em tempo real, dados de energia, baterias, temperatura, conectividade e equipamentos.</p>
+        <p><strong>Resultados observados:</strong> Maior visibilidade operacional dos sites, deteção antecipada de anomalias, redução de deslocações desnecessárias e melhor tempo de resposta das equipas de operação e manutenção.</p>
+        
+        <p class="small text-muted fst-italic mb-0">Indicadores quantitativos e referências do projeto disponíveis mediante contacto comercial.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div></div>
+  </div>
+  <div class="modal fade" id="caseModal2" tabindex="-1" aria-labelledby="caseModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title fw-bold" id="caseModalLabel2">Energia Híbrida — Regiões Rurais</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+      <div class="modal-body">
+        <p class="mb-2"><span class="badge rounded-pill bg-light text-primary border me-1">Energia híbrida</span><span class="badge rounded-pill bg-light text-primary border me-1">Conectividade rural</span></p>
+        <p><strong>Contexto:</strong> Falhas frequentes de energia em torres rurais, com impacto na disponibilidade do serviço.</p>
+        <p><strong>Solução implementada:</strong> Integração de UPS, energia solar e telemetria remota para monitorização e manutenção preventiva.</p>
+        <p><strong>Resultados observados:</strong> Menor consumo de combustível e maior estabilidade do fornecimento de energia nos sites rurais, com monitorização remota contínua.</p>
+        <!-- VALIDAR antes de publicar métricas: "-65% de combustível" e "uptime 99,9%" (indicar projeto, nº de sites, período e fonte). -->
+        <p class="small text-muted fst-italic mb-0">Indicadores quantitativos e referências do projeto disponíveis mediante contacto comercial.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div></div>
+  </div>
+  <div class="modal fade" id="caseModal3" tabindex="-1" aria-labelledby="caseModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title fw-bold" id="caseModalLabel3">RAN Sharing — Operadores Múltiplos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+      <div class="modal-body">
+        <p class="mb-2"><span class="badge rounded-pill bg-light text-primary border me-1">RAN Sharing</span><span class="badge rounded-pill bg-light text-primary border me-1">Tower Sharing</span></p>
+        <p><strong>Contexto:</strong> Infraestrutura duplicada entre operadoras, com custos desnecessários.</p>
+        <p><strong>Solução implementada:</strong> Implementação de RAN Sharing com acordos de nível de serviço (SLA) claros para todos os operadores envolvidos.</p>
+        <p><strong>Resultados observados:</strong> Redução do investimento duplicado (CAPEX) e otimização dos recursos de rede já existentes, com regras de serviço definidas contratualmente.</p>
+        <!-- VALIDAR antes de publicar métricas: "-40% de CAPEX" (indicar operadores/projeto, período e fonte). -->
+        <p class="small text-muted fst-italic mb-0">Indicadores quantitativos e referências do projeto disponíveis mediante contacto comercial.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- =========================
+     PARCEIROS
+========================= -->
+<section id="parceiros" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Nossos Parceiros</h2>
+    <div class="row g-4 justify-content-center align-items-center">
+      
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="imgs/logo.svg"  loading="lazy" alt="Unitel" class="partner-logo img-fluid">
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+          <img src="imgs/africell-logo.png" loading="lazy" alt="Africell Angola" class="partner-logo img-fluid">
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+          <img src="imgs/ITA_PARATUS_ANGOLA_LOGO_BRANCO.png" loading="lazy" alt="Paratus Angola" class="partner-logo img-fluid">
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="imgs/msbyte.avif" loading="lazy" alt="MS Byte Angola" class="partner-logo img-fluid" >
+      </div>
+
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="imgs/netspace.png" loading="lazy" alt="Netspace" class="partner-logo img-fluid">
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+          <img src="imgs/speednet.png"  loading="lazy" alt="Speednet Angola" class="partner-logo img-fluid">
+      </div>  
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="imgs/fadcom.png" loading="lazy" alt="Fadcom" class="partner-logo img-fluid">
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+          <img src="imgs/pna.jpg"  loading="lazy" alt="Policia Nacional de Angola" class="partner-logo img-fluid">
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+          <img src="imgs/atelecom.jpg"  loading="lazy" alt="Angola Telecom" class="partner-logo img-fluid">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+</section>
+ <!-- =========================
+     8) RODAPÉ / FOOTER
+     ========================= -->
+<footer class="bg-dark text-light pt-5">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <a href="index.html" class="d-inline-flex align-items-center mb-3 text-decoration-none">
+            <img src="imgs/Antosc.png" loading="lazy" alt="ANTOSC logo" style="height:48px;" class="me-2">
+          </a>
+          <p class="small text-muted">Infraestruturas críticas para conectar Angola — torres, energia e serviços.</p>
+          <ul class="list-unstyled small">
+            <li><strong>Endereço:</strong> Smart Village Talatona, Zona CS1, Rota Al 19ª, Talatona - Luanda</li>
+            <li><strong>Tel:</strong> <a href="tel:+244924408039" class="text-muted text-decoration-none">+244 924 408 039</a></li>
+            <li><strong>Geral:</strong> <a href="mailto:info@antosc.co.ao" class="text-muted text-decoration-underline">info@antosc.co.ao</a></li>
+            <li><strong>Comercial:</strong> <a href="mailto:comercial@antosc.co.ao" class="text-muted text-decoration-underline">comercial@antosc.co.ao</a></li>
+            <li><strong>Candidaturas:</strong> <a href="mailto:Antosc-RecursosHumanos@anglobal.co.ao" class="text-muted text-decoration-underline">Antosc-RecursosHumanos@anglobal.co.ao</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-6">
+          <h6 class="text-white fw-bold">Explorar</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-muted text-decoration-none">Início</a></li>
+            <li><a href="solucao.html" class="text-muted text-decoration-none">Soluções</a></li>
+            <li><a href="index.html#casos-de-sucesso" class="text-muted text-decoration-none">Casos de Sucesso</a></li>
+            <li><a href="sobre.html" class="text-muted text-decoration-none">Sobre</a></li>
+            <li><a href="sobre.html#map" class="text-muted text-decoration-none">Mapa de sites</a></li>
+            <li><a href="contacto.html" class="text-muted text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h6 class="text-white fw-bold">Serviços</h6>
+          <ul class="list-unstyled">
+            <li><a href="solucao.html#tower-sharing" class="text-muted text-decoration-none">Tower Sharing</a></li>
+            <li><a href="solucao.html#energia-hibrida" class="text-muted text-decoration-none">Energia Híbrida</a></li>
+            <li><a href="solucao.html#ran-sharing" class="text-muted text-decoration-none">RAN Sharing</a></li>
+            <li><a href="solucao.html#edge-computing" class="text-muted text-decoration-none">Edge Computing</a></li>
+            <li><a href="solucao.html#conectividade-rural" class="text-muted text-decoration-none">Conectividade Rural</a></li>
+            <li><a href="solucao.html#telecom" class="text-muted text-decoration-none">Soluções para operadoras e ISPs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-white fw-bold">Fale connosco</h6>
+          <p class="small text-muted mb-3">Tire dúvidas com a nossa equipa: <a href="contacto.html" class="text-muted text-decoration-underline">página de contacto</a>.</p>
+          <h6 class="text-white fw-bold mb-2">Siga-nos</h6>
+          <nav aria-label="Redes sociais">
+            <a href="https://www.linkedin.com/company/antosc/posts/?feedView=all" class="me-2 text-muted" aria-label="LinkedIn ANTOSC" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg"></i></a>
+          </nav>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="row align-items-center pb-3">
+        <div class="col-md-6 small text-muted">© <span id="year">2026</span> ANTOSC S.A. — Todos os direitos reservados.</div>
+        <div class="col-md-6 text-md-end">
+          <a href="privacy.html" class="text-muted text-decoration-none small me-3">Política de Privacidade</a>
+          <a href="sitemap.xml" class="text-muted text-decoration-none small">Mapa do Site</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>(function(){var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();})();</script>
+
+
+<!-- Bootstrap JS -->
+<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/coverage-data.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Números sincronizados com a fonte única (js/coverage-data.js)
+  var t = window.ANTOSC_TOTALS;
+  if (t) {
+    var a = document.getElementById("stat-sites"), b = document.getElementById("stat-prov");
+    if (a) { a.setAttribute("data-target", t.sites); a.textContent = t.sites; }
+    if (b) { b.setAttribute("data-target", t.provinces); b.textContent = t.provinces; }
+  }
+  function animateCounter(el) {
+    var target = parseFloat(el.getAttribute("data-target"));
+    if (isNaN(target)) return;
+    var prefix = el.getAttribute("data-prefix") || "", suffix = el.getAttribute("data-suffix") || "";
+    var dec = target % 1 !== 0, start = performance.now(), dur = 2000;
+    (function tick(now) {
+      var p = Math.min((now - start) / dur, 1), v = p * target;
+      el.textContent = prefix + (dec ? v.toFixed(1) : Math.ceil(v)) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    })(start);
+  }
+  var stats = document.querySelector("#stats");
+  if (stats) {
+    new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.querySelectorAll(".counter").forEach(animateCounter); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 }).observe(stats);
+  }
+  document.querySelectorAll(".nav-link").forEach(function (l) {
+    if (l.getAttribute("href") === "index.html") l.classList.add("active");
+  });
+});
+</script> 
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/244924408039?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20da%20ANTOSC" 
+   target="_blank" rel="noopener" 
+   class="whatsapp-float" 
+   aria-label="Falar connosco no WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: wa-pulse 2.4s infinite;
+  }
+  .whatsapp-float i {
+    color: #fff;
+    font-size: 30px;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.32);
+  }
+  @keyframes wa-pulse {
+    0%   { box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 0 0 0 rgba(37,211,102,0.5); }
+    70%  { box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 0 0 14px rgba(37,211,102,0); }
+    100% { box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 0 0 0 rgba(37,211,102,0); }
+  }
+  @media (max-width: 576px) {
+    .whatsapp-float { width: 52px; height: 52px; bottom: 16px; right: 16px; }
+    .whatsapp-float i { font-size: 26px; }
+  }
+</style>
+
+</body> 
+</html>

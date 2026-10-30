@@ -1,0 +1,27 @@
+/* ANTOSC — melhorias de contraste de texto (WCAG AA) e ajustes comuns */
+body { color: #1c2b3a; }
+.text-muted { color: #46525f !important; }
+.section-subtitle, .map-caption p { color: #3b4856; }
+
+/* barra de navegação sobre fundo azul */
+.navbar .nav-link { color: #ffffff !important; font-weight: 600; }
+.navbar .nav-link:hover, .navbar .nav-link:focus, .navbar .nav-link.active { color: #a8dcff !important; }
+
+/* hero: texto branco com sombra suave para ler sobre imagem/vídeo */
+.hero-title, .hero-content h1, .hero-sub, .hero-content p { color: #ffffff !important; opacity: 1 !important; text-shadow: 0 2px 14px rgba(0,0,0,.6); }
+
+/* números e rótulos */
+#stats .stat-box p, #stats p { color: #ffffff; opacity: 1; }
+.stats-section .stat-label { color: #1c2b3a; opacity: 1; font-weight: 600; }
+.cta-section p, .cta-section h2 { color: #ffffff; opacity: 1; }
+
+/* rodapé escuro */
+footer .text-muted, footer a.text-muted, footer p.text-muted { color: #d5dee9 !important; }
+footer a.text-muted:hover { color: #ffffff !important; text-decoration: underline !important; }
+footer h6 { color: #ffffff !important; }
+footer hr { opacity: .35; }
+
+/* ligações em texto corrido */
+a { text-underline-offset: 2px; }
+.btn-outline-primary { color: #0d3b66; border-color: #0d3b66; }
+.btn-outline-primary:hover { color: #fff; background: #0d3b66; }

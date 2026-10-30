@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Confirmar o domínio antes de publicar (aqui: https://antosc.co.ao) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://antosc.co.ao/</loc><priority>1.0</priority></url>
+  <url><loc>https://antosc.co.ao/sobre.html</loc><priority>0.8</priority></url>
+  <url><loc>https://antosc.co.ao/solucao.html</loc><priority>0.8</priority></url>
+  <url><loc>https://antosc.co.ao/contacto.html</loc><priority>0.7</priority></url>
+  <url><loc>https://antosc.co.ao/privacy.html</loc><priority>0.3</priority></url>
+</urlset>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-label="Ilustração do Site Alpha: torre monotubular 5G">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2a66"/><stop offset=".55" stop-color="#2d6cb5"/><stop offset="1" stop-color="#f2a65a"/></linearGradient>
+    <linearGradient id="pole" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cfd8e3"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#9fb0c4"/></linearGradient>
+  </defs>
+  <rect width="600" height="700" fill="url(#sky)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round">
+    <path d="M365 150a60 60 0 0 1 0 80"/><path d="M385 125a95 95 0 0 1 0 130"/><path d="M405 100a130 130 0 0 1 0 180"/>
+    <path d="M235 150a60 60 0 0 0 0 80"/><path d="M215 125a95 95 0 0 0 0 130"/><path d="M195 100a130 130 0 0 0 0 180"/>
+  </g>
+  <path d="M0 560 L70 520 L110 540 L150 500 L190 535 L230 510 L260 540 L330 505 L380 535 L430 500 L470 530 L520 505 L600 540 V700 H0Z" fill="#14305e" fill-opacity=".85"/>
+  <rect x="285" y="150" width="30" height="470" fill="url(#pole)"/>
+  <path d="M278 620 h44 l8 30 h-60z" fill="#8798ad"/>
+  <g fill="#e8eef6" stroke="#6b7f98" stroke-width="2"><rect x="270" y="130" width="14" height="60" rx="3"/><rect x="316" y="130" width="14" height="60" rx="3"/><rect x="293" y="110" width="14" height="60" rx="3"/></g>
+  <circle cx="300" cy="104" r="6" fill="#ff4d4d"/>
+  <rect x="0" y="640" width="600" height="60" fill="#0a1d3d"/>
+  <text x="300" y="672" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" letter-spacing="3">SITE ALPHA · 5G</text>
+</svg>
