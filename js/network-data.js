@@ -2,7 +2,7 @@
  * ANTOSC — Rede de fibra ótica e rotas (FONTE ÚNICA)
  * ----------------------------------------------------------------------
  * Alimenta o mapa de rede (sobre.html#map) e o indicador "Links de fibra
- * disponíveis". Os nós das torres vêm de js/coverage-data.js (por id).
+ * disponíveis". Os nós das sites vêm de js/coverage-data.js (por id).
  *
  * !!! ATENÇÃO !!!  Os links abaixo são um TRAÇADO DE EXEMPLO (corredores
  * entre capitais de província) para demonstrar o mapa. Têm de ser
@@ -25,7 +25,7 @@ window.ANTOSC_NETWORK = {
   // Pontos de ligação fora de Angola (rotas transfronteiriças)
   border: [
     { id: "pointe-noire", short: "POINTE-NOIRE", name: "Pointe-Noire (Rep. Congo)", coords: [11.86, -4.79], lab: "l" },
-    { id: "matadi", short: "MATADI", name: "Matadi (RD Congo)", coords: [13.45, -5.82], lab: "t" },
+    { id: "matadi", short: "MATADI", name: "Matadi (RD Congo)", coords: [13.45, -5.82], lab: "tr" },
     { id: "tshikapa", short: "TSHIKAPA", name: "Tshikapa (RD Congo)", coords: [20.80, -6.42], lab: "r" },
     { id: "solwezi", short: "SOLWEZI", name: "Solwezi (Zâmbia)", coords: [26.39, -12.18], lab: "b" },
     { id: "oshikango", short: "OSHIKANGO", name: "Oshikango (Namíbia)", coords: [15.90, -17.40], lab: "br" }

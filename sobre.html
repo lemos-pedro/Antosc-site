@@ -167,7 +167,7 @@
     .hero-section {
       position: relative; height: 70vh; min-height: 500px; overflow: hidden;
       display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(rgba(14, 22, 33, 0.42), rgba(14, 22, 33, 0.42)), url('imgs/torres.jpg') no-repeat center center;
+      background: linear-gradient(rgba(14, 22, 33, 0.42), rgba(14, 22, 33, 0.42)), url('imgs/sites.jpg') no-repeat center center;
       background-size: cover;
     }
 
@@ -406,7 +406,7 @@
           <h2 class="section-title">A infraestrutura que mantém <span>Angola conectada.</span></h2>
           <div class="about-content">
             <p class="lead">Fundada em <strong>maio de 2017</strong>, a ANTOSC é pioneira no modelo de <strong>Tower Sharing em Angola</strong> e atua na construção, gestão e operação de infraestruturas de telecomunicações críticas para o país.</p>
-            <p>Com mais de <strong>200 torres ativas</strong>, apoiamos operadoras, ISPs e organizações que dependem de uma infraestrutura <strong>robusta, segura e preparada para crescer</strong>.</p>
+            <p>Com mais de <strong>200 sites ativas</strong>, apoiamos operadoras, ISPs e organizações que dependem de uma infraestrutura <strong>robusta, segura e preparada para crescer</strong>.</p>
             <p>Combinamos <strong>engenharia, tecnologia e excelência operacional</strong> para tornar a expansão das redes mais eficiente, sustentável e acessível — permitindo que os nossos parceiros se concentrem no que fazem melhor: <strong>conectar pessoas, empresas e comunidades.</strong></p>
           </div>
         </div>
@@ -461,8 +461,8 @@
         </div>
       </div>
       <div class="map-caption">
-        <p>Mapa da rede ANTOSC: as torres por província e as rotas de fibra ótica — ativas, em implementação ou pendentes — incluindo as rotas interprovinciais e transfronteiriças em desenvolvimento.</p>
-        <p class="small mt-2 mb-0">O mapa mostra a presença por província e região; não indica a localização exata de cada site.</p>
+        <p>Mapa da rede ANTOSC: as sites por província e as rotas de fibra ótica — ativas, em implementação ou pendentes — incluindo as rotas interprovinciais e transfronteiriças em desenvolvimento.</p>
+        <p class="small mt-2 mb-0">Clique numa província para ver a lista de sites e a sua localização no mapa.</p>
         <p class="small mb-0" id="nm-updated"></p>
       </div>
     </div>
@@ -473,18 +473,18 @@
           <div class="nm-panel">
             <h3>Rede ANTOSC</h3>
             <div class="nm-metrics">
-              <div class="nm-metric"><b id="nm-sites">–</b><span>Torres / sites</span></div>
+              <div class="nm-metric"><b id="nm-sites">–</b><span>sites / sites</span></div>
               <div class="nm-metric"><b id="nm-active">–</b><span>Fibra ativa</span></div>
               <div class="nm-metric"><b id="nm-building">–</b><span>Em implementação / pendente</span></div>
               <div class="nm-metric"><b id="nm-cross">–</b><span>Transfronteiriças</span></div>
             </div>
             <ul class="nm-legend">
-              <li><span class="nm-sw tower"></span>Torres (n.º de sites)</li>
+              <li><span class="nm-sw tower"></span>sites (n.º de sites)</li>
               <li><span class="nm-sw on"></span>Fibra ativa</li>
               <li><span class="nm-sw off"></span>Em implementação / pendente</li>
             </ul>
-            <input type="text" id="nm-search" class="nm-search" placeholder="Pesquisar província…" aria-label="Pesquisar província" autocomplete="off">
-            <p class="nm-hint">Arraste para mover · Ctrl + roda do rato para ampliar</p>
+            <input type="text" id="nm-search" class="nm-search" placeholder="Pesquisar província ou site…" aria-label="Pesquisar província ou site" autocomplete="off">
+            <p class="nm-hint">Clique numa província para ver os sites · Arraste para mover · Ctrl + roda do rato para ampliar</p>
           </div>
           <div class="nm-ctrl">
             <button type="button" id="nm-zoom-in" aria-label="Ampliar">+</button>
@@ -494,7 +494,7 @@
           </div>
           <div class="nm-tabs" role="group" aria-label="Camadas do mapa">
             <button type="button" class="nm-tab active" data-filter="all">Rede completa</button>
-            <button type="button" class="nm-tab" data-filter="torres">Torres</button>
+            <button type="button" class="nm-tab" data-filter="sites">sites</button>
             <button type="button" class="nm-tab" data-filter="ativa">Fibra ativa</button>
             <button type="button" class="nm-tab" data-filter="impl">Em implementação</button>
             <button type="button" class="nm-tab" data-filter="trans">Transfronteiriças</button>
@@ -505,50 +505,6 @@
     </div>
   </section>
 
-  <section class="coverage-check-section" id="coverage-check">
-    <div class="container">
-      <div class="row mb-4 text-center">
-        <div class="col-12">
-          <h2 class="section-title">Verifique a presença da ANTOSC na sua zona</h2>
-          <p class="section-subtitle">Selecione a província e veja a nossa cobertura atual — e peça uma cotação para essa zona.</p>
-        </div>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-7">
-          <div class="coverage-card">
-            <select id="coverage-province" class="form-control form-control-lg mb-3">
-              <option value="" selected disabled>Selecione a sua província</option>
-            </select>
-
-            <div id="coverage-result" class="coverage-result d-none">
-              <div class="coverage-result-grid">
-                <div class="coverage-stat">
-                  <span class="coverage-stat-value" id="cr-count">0</span>
-                  <span class="coverage-stat-label">Sites ativos</span>
-                </div>
-                <div class="coverage-stat">
-                  <span class="coverage-stat-value" id="cr-zone">-</span>
-                  <span class="coverage-stat-label">Região</span>
-                </div>
-                <div class="coverage-stat">
-                  <span class="coverage-stat-value">99,9%</span>
-                  <span class="coverage-stat-label">Meta de disponibilidade</span>
-                </div>
-              </div>
-              <p class="coverage-msg" id="coverage-msg"></p>
-              <a href="#" id="coverage-cta" class="btn btn-primary btn-lg w-100">Pedir cotação para esta zona</a>
-            </div>
-
-            <div id="coverage-empty" class="coverage-empty">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>Escolha uma província acima para ver a nossa presença na sua zona.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <style>
     .coverage-check-section { padding: 5rem 0; background: var(--secondary); }
@@ -582,9 +538,11 @@
     .d-none { display: none !important; }
   </style>
 
+  <script src="js/sites-data.js"></script>
   <script src="js/coverage-data.js"></script>
   <script src="js/network-data.js"></script>
   <script src="js/africa-geo.js"></script>
+  <script src="js/angola-provinces.js"></script>
   <script src="js/network-map.js"></script>
   <script>
     (function () {
@@ -780,7 +738,7 @@
           <a href="index.html" class="d-inline-flex align-items-center mb-3 text-decoration-none">
             <img src="imgs/Antosc.png" loading="lazy" alt="ANTOSC logo" style="height:48px;" class="me-2">
           </a>
-          <p class="small text-muted">Infraestruturas críticas para conectar Angola — torres, energia e serviços.</p>
+          <p class="small text-muted">Infraestruturas críticas para conectar Angola — sites, energia e serviços.</p>
           <ul class="list-unstyled small">
             <li><strong>Endereço:</strong> Smart Village Talatona, Zona CS1, Rota Al 19ª, Talatona - Luanda</li>
             <li><strong>Tel:</strong> <a href="tel:+244924408039" class="text-muted text-decoration-none">+244 924 408 039</a></li>
@@ -869,7 +827,7 @@
       const nt = window.ANTOSC_NETWORK_TOTALS, nm = window.ANTOSC_NETWORK_META || {}, f = document.getElementById('stat-fiber');
       if (nt && f) {
         f.setAttribute('data-count', nt.active);
-        if (nm.validated === false) document.getElementById('stat-fiber-label').textContent = 'Links de fibra disponíveis (provisório)';
+        if (nm.validated === false) document.getElementById('stat-fiber-label').textContent = 'Links de fibra disponíveis ';
       }
       const u = document.getElementById('map-updated');
       if (u && m.updated) u.textContent = 'Dados de cobertura atualizados em ' + m.updated + '.';

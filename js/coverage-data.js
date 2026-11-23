@@ -11,6 +11,9 @@
  *
  * IMPORTANTE:
  * - Os valores count devem refletir o inventário real de sites.
+ *   Quando js/sites-data.js está carregado (deve vir ANTES deste ficheiro),
+ *   os count são recalculados a partir dessa lista (ver o fim do ficheiro);
+ *   os valores escritos abaixo servem apenas de reserva.
  * - As novas províncias começam com count: 0 até validação interna.
  * - Não distribuir sites arbitrariamente entre províncias.
  * - Atualizar updated apenas após validação dos dados.
@@ -35,13 +38,13 @@ window.ANTOSC_COVERAGE = [
     lab: "l",
     name: "Luanda",
     coords: [-8.8389, 13.2894],
-    count: 72,
+    count: 84,
     zone: "luanda"
   },
   {
     id: "icolo-e-bengo",
     short: "ICOLO E BENGO",
-    lab: "l",
+    lab: "tr",
     name: "Icolo e Bengo (Catete)",
     coords: [-9.0000, 13.7000],
     count: 0,
@@ -122,7 +125,7 @@ window.ANTOSC_COVERAGE = [
   {
     id: "bengo",
     short: "BENGO",
-    lab: "tl",
+    lab: "t",
     name: "Bengo (Dande)",
     coords: [-8.5786, 13.6644],
     count: 7,
@@ -149,7 +152,7 @@ window.ANTOSC_COVERAGE = [
   {
     id: "moxico-leste",
     short: "MOXICO LESTE",
-    lab: "r",
+    lab: "t",
     name: "Moxico Leste (Cazombo)",
     coords: [-11.9000, 22.9000],
     count: 0,
@@ -185,7 +188,7 @@ window.ANTOSC_COVERAGE = [
   {
     id: "zaire",
     short: "ZAIRE",
-    lab: "l",
+    lab: "r",
     name: "Zaire (Mbanza Kongo)",
     coords: [-6.2679, 14.2494],
     count: 5,
@@ -194,7 +197,7 @@ window.ANTOSC_COVERAGE = [
   {
     id: "malanje",
     short: "MALANJE",
-    lab: "t",
+    lab: "r",
     name: "Malanje",
     coords: [-9.5402, 16.3410],
     count: 4,
@@ -219,6 +222,21 @@ window.ANTOSC_COVERAGE = [
     zone: "sul"
   }
 ];
+
+/* Recalcula os totais por província a partir da lista de sites (js/sites-data.js). */
+(function () {
+  var sites = window.ANTOSC_SITES;
+  if (!sites || !sites.length) return;
+
+  var byProv = {};
+  sites.forEach(function (s) {
+    byProv[s.prov] = (byProv[s.prov] || 0) + 1;
+  });
+
+  window.ANTOSC_COVERAGE.forEach(function (p) {
+    p.count = byProv[p.id] || 0;
+  });
+})();
 
 window.ANTOSC_TOTALS = (function () {
   var d = window.ANTOSC_COVERAGE;
